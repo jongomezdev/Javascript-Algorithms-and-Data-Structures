@@ -465,6 +465,12 @@ function fibonacci(num, memo) {
 //   }
 // }
 
+// ===============================================================
+// Implement a function called countUniqueValues, which accepts a
+// sorted array, and counts the unique values in the array. There
+// can be negative numbers in the array, but it will always be sorted.
+// ===============================================================
+
 // function countUniqueValues(arr) {
 //   if (arr.length === 0) return 0;
 //   var i = 0;
@@ -513,33 +519,6 @@ function fibonacci(num, memo) {
 //   }
 //   return maxSum;
 // }
-
-// ===============================================================
-// Implement a function called countUniqueValues, which accepts a
-// sorted array, and counts the unique values in the array. There
-// can be negative numbers in the array, but it will always be sorted.
-// ===============================================================
-
-// ===============================================================
-// Given an array of integers "nums" and an integer "target", return
-// indices of the two numbers such that they add up to target.
-// You may assume that each input would have exactly one solution,
-// and you may not use the  same element twice.
-// You can return the answer in any order.
-// https://leetcode.com/problems/two-sum/
-// ===============================================================
-
-// Input: nums = [2,7,11,15], target = 9
-// Output: [0,1]
-// Output: Because nums[0] + nums[1] == 9, we return [0, 1].
-
-// const twoSum = (nums, target) => {
-//   let storage = {};
-//   for (let [index, num] of nums.entries()) {
-//     if (storage[num] !== undefined) return [storage[num], index];
-//     storage[target - num] = index;
-//   }
-// };
 
 // ======================================================================
 // Write code to create a function that accepts two arrays of numbers
