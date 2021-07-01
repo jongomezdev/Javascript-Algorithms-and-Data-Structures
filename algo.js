@@ -3,79 +3,78 @@
 // to all uppercase letters
 // ================================================
 
-// function sayLouder(text) {
-//   return text.toUpperCase();
-// }
+function sayLouder(text) {
+  return text.toUpperCase();
+}
 
-// console.log(sayLouder('It works'));
-// console.log(sayLouder('how are you?'));
+console.log(sayLouder('It works'));
+console.log(sayLouder('how are you?'));
 
 // ================================================
 // Filter an array
 // ================================================
 
-// const grades = [10, 2, 21, 35, 50, -10, 0, 1];
+const grades = [10, 2, 21, 35, 50, -10, 0, 1];
 
-//get all grades > 20
-// const result = grades.filter((grade) => grade > 20);
-// [21, 35, 50];
+// get all grades > 20
+const result = grades.filter((grade) => grade > 20);
+[21, 35, 50];
 
 // get all grades > 30
-// grades.filter((grade) => grade > 30); // [35, 50]
+grades.filter((grade) => grade > 30); // [35, 50]
 
 //////////////////////////////////////////////////////
 
-// function getPositiveNumbers(numbers) {
-//   return numbers.filter((number) => number > 0);
-// }
+function getPositiveNumbers(numbers) {
+  return numbers.filter((number) => number > 0);
+}
 
-// sample usage (do not modify)
-// console.log(getPositiveNumbers([10, -5, 2, -4]));
+console.log(getPositiveNumbers([10, -5, 2, -4]));
 
 // ================================================
 // fizzBuzz
 // ================================================
 
-// var output = [];
+var output = [];
 
-// function fizzBuzz() {
-//   for (var count = 1; count <= 101; count++) {
-//     if (count % 3 === 0 && count % 5 === 0) {
-//       output.push("FizzBuzz");
-//     } else if (count % 3 === 0) {
-//       output.push("Fizz");
-//     } else if (count % 5 === 0) {
-//       output.push("Buzz");
-//     } else {
-//       output.push(count);
-//     }
-//   }
-//   console.log(output);
-// }
+function fizzBuzz() {
+  for (var count = 1; count <= 101; count++) {
+    if (count % 3 === 0 && count % 5 === 0) {
+      output.push('FizzBuzz');
+    } else if (count % 3 === 0) {
+      output.push('Fizz');
+    } else if (count % 5 === 0) {
+      output.push('Buzz');
+    } else {
+      output.push(count);
+    }
+  }
+  console.log(output);
+}
 
 // ================================================
 // Not using a for loop
 // ================================================
 
-// var output = [];
-// var count = 1;
+var output = [];
+var count = 1;
 
-// function fizzBuzz() {
-//   while (count <= 100) {
-//     if (count % 3 === 0 && count % 5 === 0) {
-//       output.push("FizzBuzz");
-//     } else if (count % 3 === 0) {
-//       output.push("Fizz");
-//     } else if (count % 5 === 0) {
-//       output.push("Buzz");
-//     } else {
-//       output.push(count);
-//     }
+function fizzBuzz() {
+  while (count <= 100) {
+    if (count % 3 === 0 && count % 5 === 0) {
+      output.push('FizzBuzz');
+    } else if (count % 3 === 0) {
+      output.push('Fizz');
+    } else if (count % 5 === 0) {
+      output.push('Buzz');
+    } else {
+      output.push(count);
+    }
 
-//     count++;
-//   }
-//   console.log(output);
-// }
+    count++;
+  }
+  console.log(output);
+}
 
 // ================================================
 // Write a function that calculates the sum of all
@@ -86,27 +85,27 @@
 // the slow way
 // ================================================
 
-// function addUpTo(n) {
-//   let total = 0;
-//   for (let i = 0; i <= n; i++) {
-//     total += i;
-//   }
-//   return total;
-// }
+function addUpTo(n) {
+  let total = 0;
+  for (let i = 0; i <= n; i++) {
+    total += i;
+  }
+  return total;
+}
 
 // ================================================
 // the fast way
 // ================================================
 
-// function addUpTo(n) {
-//   return (n * (n + 1)) / 2;
-// }
+function addUpTo(n) {
+  return (n * (n + 1)) / 2;
+}
 
-// //test the amount of time it takes.
-// var time1 = performance.now();
-// addUpTo(1000000000);
-// var time2 = performance.now();
-// console.log(`Time Elapsed: ${(time2 - time1) / 1000} seconds.`);
+//test the amount of time it takes.
+var time1 = performance.now();
+addUpTo(1000000000);
+var time2 = performance.now();
+console.log(`Time Elapsed: ${(time2 - time1) / 1000} seconds.`);
 
 // ================================================
 // Fibonacci Sequence
@@ -166,29 +165,29 @@ function fibonacci(num, memo) {
 // Sort an array of numbers in numerical order
 // ================================================
 
-// const arr = [9, 3, 6, 2, 8, 1, 0, 7, 5];
+const arr = [9, 3, 6, 2, 8, 1, 0, 7, 5];
 
-// arr.sort((a, b) => a - b);
+arr.sort((a, b) => a - b);
 
-// const arr = [
-//   { value: 2, weight: 8 },
-//   { value: 1, weight: 10 },
-//   { value: 5, weight: 2 },
-//   { value: 3, weight: 6 },
-//   { value: 4, weight: 4 },
-// ];
-// arr.sort((a, b) => a.weight - b.weight);
+const arr = [
+  { value: 2, weight: 8 },
+  { value: 1, weight: 10 },
+  { value: 5, weight: 2 },
+  { value: 3, weight: 6 },
+  { value: 4, weight: 4 },
+];
+arr.sort((a, b) => a.weight - b.weight);
 // invert if you want highest to lowest.
 
 //******* double([1, 2, 3]) prints --> [2, 4, 6] ** Makes new array*/
 // for loop passes through the first array (user input)
-// function double(arr) {
-//   let newArr = [];
-//   for (let i = 0; i < arr.length; i++) {
-//     newArr.push(2 * arr[i]);
-//   }
-//   return newArr;
-// }
+function double(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(2 * arr[i]);
+  }
+  return newArr;
+}
 
 // *************** Algorithms ****************
 
@@ -196,10 +195,10 @@ function fibonacci(num, memo) {
 // Write a function which takes two numbers and returns their sum.
 // ===============================================================
 
-// function add(x, y) {
-//   return x + y;
-// }
-// console.log(add(10, 12));
+function add(x, y) {
+  return x + y;
+}
+console.log(add(10, 12));
 
 // 1. Can I restate the problem in my own words?
 // "Add two numbers and return the value"
@@ -215,84 +214,13 @@ function fibonacci(num, memo) {
 //
 
 // ===============================================================
-// Return a string in reverse.
-// ===============================================================
-
-// Clean code. easy to explain
-// function reverseString(str) {
-//   const strArr = str.split("");
-//   strArr.reverse();
-//   return strArr.join("");
-// }
-
-// One liner.
-// function reverseString(str) {
-//   return str.split("").reverse().join("");
-// }
-
-// Using a decreasing forLoop
-// function reverseString(str) {
-//   let revString = "";
-//   for (let i = str.length - 1; i >= 0; i--) {
-//     revString = revString + str[i];
-//   }
-//   return revString;
-// }
-
-// Using an increasing forLoop
-// function reverseString(str) {
-//   let revString = "";
-//   for (let i = 0; i <= str.length - 1; i++) {
-//     revString = str[i] + revString;
-//   }
-//   return revString;
-// }
-
-// Using forOf loop
-// function reverseString(str) {
-//   let revString = ""
-//   for(let char of str) {
-//     revString = char + revString;
-//   }
-//   return revString
-// }
-
-// For Each loop
-// function reverseString(str) {
-//   let revString = "";
-//   str.split("").forEach(function (char) {
-//     revString = char + revString;
-//   });
-//   return revString;
-// }
-
-// For each ES6
-// function reverseString(str) {
-//   let revString = "";
-//   str.split("").forEach((char) => (revString = char + revString));
-//   return revString;
-// }
-
-// Using REDUCUCE
-// function reverseString(str) {
-//   return str.split("").reduce(function (revString, char) {
-//     return char + revString;
-//   }, "");
-// }
-
-// Using reduce and ES6
-// function reverseString(str) {
-//   return str.split("").reduce((revString, char) => char + revString, "");
-// }
-
-// ===============================================================
 // VALIDATE A PALINDROME return TRUE or FALSE
 // ===============================================================
 
-// function isPalindrome(str) {
-//   const revString = str.split('').reverse().join('');
-//   return revString === str;
-// }
+function isPalindrome(str) {
+  const revString = str.split('').reverse().join('');
+  return revString === str;
+}
 
 // ===============================================================
 // Write a function that takes in a string and returns counts of
@@ -306,39 +234,39 @@ function fibonacci(num, memo) {
 // charCount('aaaa') // {a:4}
 // charCount('hello') // {h:1, e:1, l:2, o:1}
 
-// function charCount(str) {
-// make object to return at the end
-// loop over string for each character
-// if the char is a number/letter AND is key in object, add one to count
-// if the char is a number/letter AND is not in object, add it object and set value to 1
-// if char is something else (space, period, etc.) don't do anything
-// return object at end
-// }
+function charCount(str) {
+  // make object to return at the end
+  // loop over string for each character
+  // if the char is a number/letter AND is key in object, add one to count
+  // if the char is a number/letter AND is not in object, add it object and set value to 1
+  // if char is something else (space, period, etc.) don't do anything
+  // return object at end
+}
 
-// function charCount(str) {
-//   let result = {};
-//   for (let i = 0; i < str.length; i++) {
-//     let char = str.charAt(i).toLowerCase();
-//     if (result[char] > 0) {
-//       result[char]++;
-//     } else {
-//       result[char] = 1;
-//     }
-//   }
-//   return result;
-// }
+function charCount(str) {
+  let result = {};
+  for (let i = 0; i < str.length; i++) {
+    let char = str.charAt(i).toLowerCase();
+    if (result[char] > 0) {
+      result[char]++;
+    } else {
+      result[char] = 1;
+    }
+  }
+  return result;
+}
 //============== refactored ====================
 
-// function charCount(str) {
-//   let obj = {};
-//   for (let char of str) {
-//     char = char.toLowerCase();
-//     if (/[a-z0-9]/.test(char)) {
-//       obj[char] = ++obj[char] || 1;
-//     }
-//   }
-//   return obj;
-// }
+function charCount(str) {
+  let obj = {};
+  for (let char of str) {
+    char = char.toLowerCase();
+    if (/[a-z0-9]/.test(char)) {
+      obj[char] = ++obj[char] || 1;
+    }
+  }
+  return obj;
+}
 
 // Frequency Counter Pattern
 // ===============================================================
@@ -349,46 +277,46 @@ function fibonacci(num, memo) {
 // ===============================================================
 
 // Time complexity - N^2 (quadratic reltionship) because there's a forloop iterating as well as indexOf
-// function same(arr1, arr2) {
-//   if (arr1.length !== arr2.length) {
-//     return false;
-//   }
-//   for (let i = 0; i < arr1.length; i++) {
-//     let correctIndex = arr2.indexOf(arr1[i] ** 2);
-//     if (correctIndex === -1) {
-//       return false;
-//     }
-//     arr2.splice(correctIndex, 1);
-//   }
-//   return true;
-// }
+function same(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+  for (let i = 0; i < arr1.length; i++) {
+    let correctIndex = arr2.indexOf(arr1[i] ** 2);
+    if (correctIndex === -1) {
+      return false;
+    }
+    arr2.splice(correctIndex, 1);
+  }
+  return true;
+}
 
 // Time complexity - O(n) (linear time)
-// function same(arr1, arr2) {
-//   if (arr1.length !== arr2.length) {
-//     return false;
-//   }
-//   let frequencyCounter1 = {};
-//   let frequencyCounter2 = {};
+function same(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+  let frequencyCounter1 = {};
+  let frequencyCounter2 = {};
 
-//   for (let val of arr1) {
-//     frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1;
-//   }
-//   for (let val of arr2) {
-//     frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1;
-//   }
-//   for (let key in frequencyCounter1) {
-//     if (!(key ** 2 in frequencyCounter2)) {
-//       return false;
-//     }
-//     if (frequencyCounter2[key ** 2] !== frequencyCounter1[key]) {
-//       return false;
-//     }
-//   }
-//    console.log(frequencyCounter1)
-//    console.log(frequencyCounter2)
-//   return true;
-// }
+  for (let val of arr1) {
+    frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1;
+  }
+  for (let val of arr2) {
+    frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1;
+  }
+  for (let key in frequencyCounter1) {
+    if (!(key ** 2 in frequencyCounter2)) {
+      return false;
+    }
+    if (frequencyCounter2[key ** 2] !== frequencyCounter1[key]) {
+      return false;
+    }
+  }
+  console.log(frequencyCounter1);
+  console.log(frequencyCounter2);
+  return true;
+}
 
 // same([1,2,3], [4,1,9]) // true
 // same([1,2,3], [1,9]) // false
@@ -401,27 +329,27 @@ function fibonacci(num, memo) {
 // cinema, formed from iceman.
 // ===============================================================
 
-// function validAnagram(first, second) {
-//   if (first.length !== second.length) {
-//     return false;
-//   }
-//   const lookup = {};
-//   for (let i = 0; i < first.length; i++) {
-//     let letter = first[i];
-//     // if letter exists, increment, otherwise set to 1
-//     lookup[letter] ? (lookup[letter] += 1) : (lookup[letter] = 1);
-//   }
-//   for (let i = 0; i < second.length; i++) {
-//     let letter = second[i];
-//     // can't find letter or letter is zero then it's not an anagram
-//     if (!lookup[letter]) {
-//       return false;
-//     } else {
-//       lookup[letter] -= 1;
-//     }
-//   }
-//   return true;
-// }
+function validAnagram(first, second) {
+  if (first.length !== second.length) {
+    return false;
+  }
+  const lookup = {};
+  for (let i = 0; i < first.length; i++) {
+    let letter = first[i];
+    // if letter exists, increment, otherwise set to 1
+    lookup[letter] ? (lookup[letter] += 1) : (lookup[letter] = 1);
+  }
+  for (let i = 0; i < second.length; i++) {
+    let letter = second[i];
+    // can't find letter or letter is zero then it's not an anagram
+    if (!lookup[letter]) {
+      return false;
+    } else {
+      lookup[letter] -= 1;
+    }
+  }
+  return true;
+}
 
 //                      MULTIPLE POINTERS
 // Creating pointers or values that correspond to an index or position
@@ -437,33 +365,33 @@ function fibonacci(num, memo) {
 // Time Complexity - O(N^2)
 // Space Complexity - O(1)
 // Brute force:
-// function sumZero(arr) {
-//   for (let i = 0; i < arr.length; i++) {
-//     for (let j = i + 1; j < arr.length; j++) {
-//       if (arr[i] + arr[j] === 0) {
-//         return [arr[i], arr[j]];
-//       }
-//     }
-//   }
-// }
+function sumZero(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] === 0) {
+        return [arr[i], arr[j]];
+      }
+    }
+  }
+}
 
 // Time Complexity - O(N)
 // Space Complexity - O(1)
 // Refactor:
-// function sumZero(arr) {
-//   let left = 0;
-//   let right = arr.length - 1;
-//   while (left < right) {
-//     let sum = arr[left] + arr[right];
-//     if (sum === 0) {
-//       return [arr[left], arr[right]];
-//     } else if (sum > 0) {
-//       right--;
-//     } else {
-//       left++;
-//     }
-//   }
-// }
+function sumZero(arr) {
+  let left = 0;
+  let right = arr.length - 1;
+  while (left < right) {
+    let sum = arr[left] + arr[right];
+    if (sum === 0) {
+      return [arr[left], arr[right]];
+    } else if (sum > 0) {
+      right--;
+    } else {
+      left++;
+    }
+  }
+}
 
 // ===============================================================
 // Implement a function called countUniqueValues, which accepts a
@@ -471,80 +399,80 @@ function fibonacci(num, memo) {
 // can be negative numbers in the array, but it will always be sorted.
 // ===============================================================
 
-// function countUniqueValues(arr) {
-//   if (arr.length === 0) return 0;
-//   var i = 0;
-//   for (var j = 1; j < arr.length; j++) {
-//     if (arr[i] !== arr[j]) {
-//       i++;
-//       arr[i] = arr[j];
-//     }
-//     console.log(i, j);
-//   }
-//   return i + 1;
-// }
-// countUniqueValues([1, 1, 1, 2, 2, 3, 4, 5, 5, 5, 6, 7]);
+function countUniqueValues(arr) {
+  if (arr.length === 0) return 0;
+  var i = 0;
+  for (var j = 1; j < arr.length; j++) {
+    if (arr[i] !== arr[j]) {
+      i++;
+      arr[i] = arr[j];
+    }
+    console.log(i, j);
+  }
+  return i + 1;
+}
+countUniqueValues([1, 1, 1, 2, 2, 3, 4, 5, 5, 5, 6, 7]);
 
 // ===============================================================
 // Sliding window pattern #33
 // ===============================================================
 
-// function maxSubarraySum(arr, num) {
-//   if (num > arr.length) {
-//     return null;
-//   }
-//   var max = -Infinity;
-//   for (let i = 0; i < arr.length - num + 1; i++) {
-//     temp = 0;
-//     for (let j = 0; j < num; j++) {
-//       if (temp > max) {
-//         max = temp;
-//       }
-//     }
-//   }
-//   return max;
-// }
+function maxSubarraySum(arr, num) {
+  if (num > arr.length) {
+    return null;
+  }
+  var max = -Infinity;
+  for (let i = 0; i < arr.length - num + 1; i++) {
+    temp = 0;
+    for (let j = 0; j < num; j++) {
+      if (temp > max) {
+        max = temp;
+      }
+    }
+  }
+  return max;
+}
 
-// function maxSubarraySum(arr, num) {
-//   let maxSum = 0;
-//   let tempSum = 0;
-//   if (arr.length < num) return null;
-//   for (let i = 0; i < num; i++) {
-//     maxSum += arr[i];
-//   }
-//   tempSum = maxSum;
-//   for (let i = num; i < arr.length; i++) {
-//     tempSum = tempSum - arr[i - num] + arr[i];
-//     maxSum = Math.max(maxSum, tempSum);
-//   }
-//   return maxSum;
-// }
+function maxSubarraySum(arr, num) {
+  let maxSum = 0;
+  let tempSum = 0;
+  if (arr.length < num) return null;
+  for (let i = 0; i < num; i++) {
+    maxSum += arr[i];
+  }
+  tempSum = maxSum;
+  for (let i = num; i < arr.length; i++) {
+    tempSum = tempSum - arr[i - num] + arr[i];
+    maxSum = Math.max(maxSum, tempSum);
+  }
+  return maxSum;
+}
 
 // ======================================================================
 // Write code to create a function that accepts two arrays of numbers
 // Return a new array containing the intersecting elements of the arrays
 // ======================================================================
 
-// function arrayIntersection(arr1, arr2) {
-//   var result = [];
-//   while (arr1.length > 0 && arr2.length > 0) {
-//     if (arr1[0] < arr2[0]) {
-//       arr1.shift();
-//     } else if (arr1[0] > arr2[0]) {
-//       arr2.shift();
-//     } else {
-//       //they are equal
-//       result.push(arr1.shift());
-//       arr2.shift();
-//     }
-//   }
+function arrayIntersection(arr1, arr2) {
+  var result = [];
+  while (arr1.length > 0 && arr2.length > 0) {
+    if (arr1[0] < arr2[0]) {
+      arr1.shift();
+    } else if (arr1[0] > arr2[0]) {
+      arr2.shift();
+    } else {
+      //they are equal
+      result.push(arr1.shift());
+      arr2.shift();
+    }
+  }
 
-//   return result;
-// }
+  return result;
+}
 
-// arrayIntersection([1, 2, 3, 4, 6], [4, 6, 7, 8]);
+arrayIntersection([1, 2, 3, 4, 6], [4, 6, 7, 8]);
 
-// =====================================================================================
+//=====================================================================================
 // Write a function to take an array of integers and return the minimum
 // number of increments required across the array to ensure that every number is unique
 // =====================================================================================
@@ -559,52 +487,52 @@ function fibonacci(num, memo) {
 
 // return a minimum or maximum will usually need a counter
 
-// const minIncrement = (nums) => {
-//   var uniqueNums = {};
-//   var increments = 0;
+const minIncrement = (nums) => {
+  var uniqueNums = {};
+  var increments = 0;
 
-//   for (var i = 0; i < nums.length; i++) {
-//     while (uniqueNums[nums[i]] === true) {
-//       nums[i] += 1;
-//       increments++;
-//     }
-//     uniqueNums[nums[i]] = true;
-//   }
-//   return increments;
-// };
+  for (var i = 0; i < nums.length; i++) {
+    while (uniqueNums[nums[i]] === true) {
+      nums[i] += 1;
+      increments++;
+    }
+    uniqueNums[nums[i]] = true;
+  }
+  return increments;
+};
 
 // =====================================================================================
 // Write a for loop that looks at each index of the array to see if it matches the random value
 // If it does match the random value display an alert box with the index of the array and the value
 // =====================================================================================
 
-// var length = 14;
+var length = 14;
 
-// var stuff = [10, 34, 56, 67, 93, 120, 137, 168, 259, 280, 311, 342, 413, 514];
-// var random_value = stuff[Math.floor(Math.random() * 14)];
+var stuff = [10, 34, 56, 67, 93, 120, 137, 168, 259, 280, 311, 342, 413, 514];
+var random_value = stuff[Math.floor(Math.random() * 14)];
 
-// function linearSearch() {
-//   for (let i = 0; i < stuff.length; i += 1) {
-//     if (stuff[i] === random_value) {
-//       return stuff[i];
-//     }
-//   }
-// }
-// linearSearch();
+function linearSearch() {
+  for (let i = 0; i < stuff.length; i += 1) {
+    if (stuff[i] === random_value) {
+      return stuff[i];
+    }
+  }
+}
+linearSearch();
 
-// function binarySearch(numbersArr, searchElement) {
-//   console.log('looking for x:', searchElement);
-//   var middleIndex = Math.floor(numbersArr.length / 2);
-//   // console.log(middleIndex);
-//   if (searchElement === numbersArr[middleIndex]) {
-//     return middleIndex;
-//   } else if (searchElement > numbersArr[middleIndex]) {
-//     numbersArr = numbersArr.slice(middleIndex + 1, numbersArr.length);
-//   }
-// }
+function binarySearch(numbersArr, searchElement) {
+  console.log('looking for x:', searchElement);
+  var middleIndex = Math.floor(numbersArr.length / 2);
+  // console.log(middleIndex);
+  if (searchElement === numbersArr[middleIndex]) {
+    return middleIndex;
+  } else if (searchElement > numbersArr[middleIndex]) {
+    numbersArr = numbersArr.slice(middleIndex + 1, numbersArr.length);
+  }
+}
 
-// var result = binarySearch(
-//   [1, 23, 43, 56, 77, 89, 211, 212, 789, 972, 1001, 4567, 4599, 83784],
-//   212
-// );
-// console.log(result);
+var result = binarySearch(
+  [1, 23, 43, 56, 77, 89, 211, 212, 789, 972, 1001, 4567, 4599, 83784],
+  212
+);
+console.log(result);

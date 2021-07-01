@@ -28,6 +28,7 @@ function merge(arr1, arr2) {
       results.push(arr1[i]);
       i++;
     } else {
+      results.push(arr2[j]);
       j++;
     }
   }

@@ -82,7 +82,7 @@ Return the final string after all such duplicate removals have been made.
 It can be proven that the answer is unique.
 */
 
-var removeDuplicates = function (s) {
+const removeDuplicates = (s) => {
   let storage = [];
 
   for (let i = 0; i < s.length; i++) {
@@ -95,5 +95,7 @@ var removeDuplicates = function (s) {
   return storage.join('');
 };
 
-/** Input: s = "abbaca"
-Output: "ca" */
+/**
+ * Input: s = "abbaca"
+ * Output: "ca"
+ */
