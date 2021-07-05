@@ -87,9 +87,10 @@
  * - If the index is less than zero or greater than the length,
  * return false
  * - If the index is the same as the length, push a
- * new node to the end
- * of the list.
+ * new node to the end of the list.
  * - If the index is 0, unshift a new node to the start of the list
+ * - Otherwise, using the get method, access node at the index -1
+ * Set the next property on that node to be the new node
  */
 
 /**
@@ -193,6 +194,18 @@ class SinglyLinkedList {
     }
     return false;
   }
+  insert(index, val) {
+    if (index < 0 || index > this.length) return false;
+    if (index === this.length) return !!this.push(val);
+    if (index === 0) return !!this.unshift(val);
+    var newNode = new Node(val);
+    var prev = this.get(index - 1);
+    var temp = prev.next;
+    prev.next = newNode;
+    newNode.next = temp;
+    this.length++;
+    return true;
+  }
 }
 
 var list = new SinglyLinkedList();
@@ -203,9 +216,3 @@ list.push(4);
 list.push(5);
 list.push(6);
 list.head.next.next;
-
-// var first = new Node('Hi');
-// first.next = new Node('there');
-// first.next.next = new Node('how');
-// first.next.next.next = new Node('are');
-// first.next.next.next.next = new Node('you');
