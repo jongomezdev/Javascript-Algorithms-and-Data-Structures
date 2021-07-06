@@ -4,27 +4,29 @@
 //   2. An integer, r, denoting the right part of the range.
 // The function must return an array of integers denoting the odd numbers between l and r.
 
-// function oddNumbers(l, r) {
-//   let numbers = [];
+function oddNumbers1(l, r) {
+  let numbers = [];
 
-//   if (l % 2 == 1) {
-//     numbers.push(l);
-//   }
-//   if (l < r) {
-//     for (let i = l + 1; i < r; i++) {
-//       if (i % 2 == 1) {
-//         numbers.push(i);
-//       }
-//     }
-//     if (r % 2 == 1) {
-//       numbers.push(r);
-//     }
-//   }
+  if (l % 2 == 1) {
+    numbers.push(l);
+  }
+  if (l < r) {
+    for (let i = l + 1; i < r; i++) {
+      if (i % 2 == 1) {
+        numbers.push(i);
+      }
+    }
+    if (r % 2 == 1) {
+      numbers.push(r);
+    }
+  }
 
-//   return numbers;
-// }
+  return numbers;
+}
 
-// console.log(oddNumbers(1, 55));
+console.log(oddNumbers1(2, 15));
+
+///////////////////////////////////////////////////////////////////////////////////////
 
 function oddNumbers(l, r) {
   let numbers = [];
@@ -37,4 +39,4 @@ function oddNumbers(l, r) {
   return numbers;
 }
 
-console.log(oddNumbers(1, 5));
+console.log(oddNumbers(2, 15));
