@@ -106,6 +106,19 @@
  */
 
 /**
+ * Reverse Pseudocode
+ * - Swap the head and the tail
+ * - Create a variable called next, and another called prev
+ * - Create a variable called node and initialize it to the
+ * head property
+ * - Loop through the list
+ * - Set next to be the next property on whatever node is
+ * - Set the next property on the node to be whatever prev is
+ * - Set the prev to be the value of the node variable
+ * - Set the node variable to be the value of the next variable
+ */
+
+/**
  * To be able to traverse our list we start at the begining and loop
  * while there is a .next
  * - create a traverse method
@@ -120,6 +133,14 @@
 //     current = current.next;
 //   }
 // }
+
+// BIG O
+/**
+ * Insertion - o(1)
+ * Removal - O(N)
+ * Searching - O(N)
+ * Access - O(N)
+ */
 
 class Node {
   constructor(val) {
@@ -228,6 +249,20 @@ class SinglyLinkedList {
     this.length--;
     return removed;
   }
+  reverse() {
+    var node = this.head;
+    this.head = this.tail;
+    this.tail = node;
+    var next;
+    var prev = null;
+    for (var i = 0; i < this.length; i++) {
+      next = node.next;
+      node.next = prev;
+      prev = node;
+      node = next;
+    }
+    return this;
+  }
 }
 
 var list = new SinglyLinkedList();
@@ -237,4 +272,3 @@ list.push(3);
 list.push(4);
 list.push(5);
 list.push(6);
-list.head.next.next;
