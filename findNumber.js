@@ -14,7 +14,6 @@ function findNumber(arr, k) {
       answer = 'YES';
       break;
     }
-    console.log(el);
   }
   return answer;
 }

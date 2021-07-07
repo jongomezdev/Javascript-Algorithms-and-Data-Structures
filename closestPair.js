@@ -29,3 +29,11 @@ function closestSumPair(arr1, arr2, target) {
 }
 
 arr = [-1, 3, 8, 2, 9, 5];
+
+function numOfIds(pool) {
+  let totalCount = 0;
+  for (let i = 0; i < pool.length; i = i + 8) {
+    if (pool.substring(i, 7) == '8') totalCount++;
+  }
+  return totalCount;
+}
