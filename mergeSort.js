@@ -43,7 +43,35 @@ function mergeSort(arr) {
   return merge(left, right);
 }
 
-// var arr = [10, 24, 76, 73, 72, 1, 9];
-// Math.floor(arr.length / 2) - split the above array in half
-// arr.slice(0,3) -> 10, 24, 76
-// arr.slice(3) -> 73, 72, 1, 9
+/**
+ * Recursive solution:
+ */
+
+function mergeTwoLists(l1, l2) {
+  if (!l1 || !l2) return l1 || l2;
+
+  [l1, l2] = [l1, l2].sort((a, b) => a.val - b.val);
+  console.log(l1);
+  l1.next = mergeTwoLists(l1.next, l2);
+  return l1;
+}
+
+// Normal solution
+
+var mergeTwoLists = function (l1, l2) {
+  if (l1 == null) {
+    console.log('l1 is null, returning l2: ', l2);
+    return l2;
+  } else if (l2 == null) {
+    console.log('l2 is null, returning l1: ', l1);
+    return l1;
+  } else if (l1.val <= l2.val) {
+    l1.next = mergeTwoLists(l1.next, l2);
+    console.log('return l1: ', l1);
+    return l1;
+  } else {
+    l2.next = mergeTwoLists(l1, l2.next);
+    console.log('return l2: ', l2);
+    return l2;
+  }
+};
