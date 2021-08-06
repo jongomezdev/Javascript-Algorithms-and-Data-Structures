@@ -1,25 +1,4 @@
 // ===============================================================
-// Given an array of integers "nums" and an integer "target", return
-// indices of the two numbers such that they add up to target.
-// You may assume that each input would have exactly one solution,
-// and you may not use the  same element twice.
-// You can return the answer in any order.
-// https://leetcode.com/problems/two-sum/
-// ===============================================================
-
-// Input: nums = [2,7,11,15], target = 9
-// Output: [0,1]
-// Output: Because nums[0] + nums[1] == 9, we return [0, 1].
-
-const twoSum = (nums, target) => {
-  let storage = {};
-  for (let [index, num] of nums.entries()) {
-    if (storage[num] !== undefined) return [storage[num], index];
-    storage[target - num] = index;
-  }
-};
-
-// ===============================================================
 // Given a 2d grid map of '1's (land) and '0's (water), count the
 // number of islands. An island is surrounded by water and is formed
 // by connecting adjacent lands horizontally or vertically. You may
