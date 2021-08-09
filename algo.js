@@ -222,6 +222,31 @@ function isPalindrome(str) {
   return revString === str;
 }
 
+var isPalindrome = function(s) {
+   var sl = s.toLowerCase(); 
+   var regex = /[^a-zA-Z0-9]/gi;
+   var sreg = sl.replace(regex,''); 
+   return sreg === sreg.split('').reverse().join('');
+  };
+
+// Easier to understand.
+
+  var isPalindrome = function(s) {
+
+    const stripPunctuationAndLowerCase = (x) => {
+        return x.replace(/[^0-9a-zA-Z]+/gmi,"").toLowerCase();
+    }
+    
+    let reversed = stripPunctuationAndLowerCase(s).split('').reverse().join('');
+
+  if (reversed === stripPunctuationAndLowerCase(s.split(' ').join(''))){
+      return true;
+  }else {
+      return false;
+  }
+};
+
+
 // ===============================================================
 // Write a function that takes in a string and returns counts of
 // each character in the string.
