@@ -438,40 +438,6 @@ function countUniqueValues(arr) {
 }
 countUniqueValues([1, 1, 1, 2, 2, 3, 4, 5, 5, 5, 6, 7]);
 
-// ===============================================================
-// Sliding window pattern #33
-// ===============================================================
-
-function maxSubarraySum(arr, num) {
-  if (num > arr.length) {
-    return null;
-  }
-  var max = -Infinity;
-  for (let i = 0; i < arr.length - num + 1; i++) {
-    temp = 0;
-    for (let j = 0; j < num; j++) {
-      if (temp > max) {
-        max = temp;
-      }
-    }
-  }
-  return max;
-}
-
-function maxSubarraySum(arr, num) {
-  let maxSum = 0;
-  let tempSum = 0;
-  if (arr.length < num) return null;
-  for (let i = 0; i < num; i++) {
-    maxSum += arr[i];
-  }
-  tempSum = maxSum;
-  for (let i = num; i < arr.length; i++) {
-    tempSum = tempSum - arr[i - num] + arr[i];
-    maxSum = Math.max(maxSum, tempSum);
-  }
-  return maxSum;
-}
 
 // ======================================================================
 // Write code to create a function that accepts two arrays of numbers
