@@ -68,3 +68,13 @@ function reverseString(str) {
 function reverseString(str) {
   return str.split('').reduce((revString, char) => char + revString, '');
 }
+
+var reverseString = function(s) {
+  let i = 0, j = s.length - 1;
+  while (i < j) {
+      [s[i], s[j]] = [s[j], s[i]];
+      i++;
+      j--;
+  }
+  return s;
+};

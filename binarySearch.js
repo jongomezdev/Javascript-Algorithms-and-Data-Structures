@@ -1,11 +1,18 @@
-// Binary search is a much faster form of search, rather than eliminating one element at a time, you can eliminate half of the remaining elements at a time. Binary search ONLY WORKS ON SORTED ARRAYS!
+// Binary search is a much faster form of search, rather than eliminating 
+// one element at a time, you can eliminate half of the remaining elements 
+// at a time. Binary search ONLY WORKS ON SORTED ARRAYS!
 
 // DIVIDE AND CONQUER
-// We split up the sorted array into two pieces, we pick a pivot point (usually in the middle) and we check the left side & the right side to see which half the element is at.
+// We split up the sorted array into two pieces, we pick a pivot 
+// point (usually in the middle) and we check the left side & 
+// the right side to see which half the element is at.
 
-// This algorithm should be more efficient than linearSearch - you can read how to implement it here - https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search and here - https://www.topcoder.com/community/data-science/data-science-tutorials/binary-search/
+// This algorithm should be more efficient than linearSearch -
+// you can read how to implement it here - https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search 
+// and here - https://www.topcoder.com/community/data-science/data-science-tutorials/binary-search/
 
-// Write a function called binarySearch which accepts a sorted array and a value and returns the index at which the value exists. Otherwise, return -1.
+// Write a function called binarySearch which accepts a sorted 
+// array and a value and returns the index at which the value exists. Otherwise, return -1.
 
 function binarySearch(arr, elem) {
   var start = 0;
