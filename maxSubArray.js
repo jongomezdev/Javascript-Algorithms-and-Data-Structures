@@ -4,6 +4,8 @@
  * and return it's sum.
  */
 
+ // https://www.youtube.com/watch?v=DF5azwm_LJc
+
 function maxSubArray(nums) {
   let solution = nums[0];
   for (let i = 1; i < nums.length; i++) {
