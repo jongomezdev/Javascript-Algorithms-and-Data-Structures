@@ -16,3 +16,6 @@ const reverse = (x) => {
 };
 
 reverse(123);
+
+const reversedNum = (num) =>
+  parseFloat(num.toString().split('').reverse().join('')) * Math.sign(num);
