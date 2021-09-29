@@ -26,3 +26,31 @@ It would be easiest to sort the arrays first in order to spot a pattern
 # Tip 4: Use some sort of Visualization
 
 # Tip 5: Test your solution on a few examples
+
+# 1. Can I restate the problem in my own words?
+
+```
+ "Add two numbers and return the value"
+```
+
+# 2. What are the inputs that go into the problem?
+
+```
+ - ints?
+ - floats?
+ - what about string for large numbers?
+```
+
+# 3. What are the outputs that should come from the solution to the problem?
+
+```
+ -int? -float? -string?
+```
+
+# 4. Can the outputs be determined from the inputs? In other words, do I have enough information to solve the problem?
+
+```
+ What if there is only one number?
+```
+
+# 5. How should I label the important pieces of data that are a part of the problem?

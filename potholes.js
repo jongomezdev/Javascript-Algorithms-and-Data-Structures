@@ -40,12 +40,18 @@
 //   return;
 // };
 
-const solution = (S) => {
-  if (S.length <= 0) return undefined;
-  let length = S.length;
-  let string = S.match(/[.]/g);
-  let potHoleNum = Math.round(length / string.length);
-  return potHoleNum;
-};
+function solution(S) {
+  // write your code in JavaScript (Node.js 8.9.4)
+  let potHoles = 0;
+  for (let i = 0; i < S.length; i++)
+    if (S.charAt(i) == 'X') {
+      potHoles++;
+      i += 2;
+    }
+  return potHoles;
+}
 
 solution('.X..X');
+solution('X.XXXXX.X.');
+solution('XX.XXX..');
+solution('XXXX');

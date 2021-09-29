@@ -1,11 +1,17 @@
-// Write a function called power which accepts a base and an exponent. The function should return the power of the base to the exponent. This function should mimic the functionality of Math.pow() - do not worry about negative bases and exponents.
+// Write a function called power which accepts a base and an exponent.
+// The function should return the power of the base to the exponent.
+// This function should mimic the functionality of Math.pow() -
+// do not worry about negative bases and exponents.
 
 function power(base, exponent) {
   if (exponent === 0) return 1;
   return base * power(base, exponent - 1);
 }
 
-//WRite a function factorial which accepts a number and returns the factorial of that number. A factorial is the product of an integer and all the integers below it; e.g., factorial 4 (4!) is equal to 24, because 4 * 3 * 2 * 1 equals 24. Factorial zero (0!) is always 1.
+// Write a function factorial which accepts a number and returns
+// the factorial of that number. A factorial is the product of an
+//  integer and all the integers below it; e.g., factorial 4 (4!)
+// is equal to 24, because 4 * 3 * 2 * 1 equals 24. Factorial zero (0!) is always 1.
 
 function factorial(x) {
   if (x < 0) return 0;
@@ -13,7 +19,8 @@ function factorial(x) {
   return x * factorial(x - 1);
 }
 
-// Write a function called productOfArray which takes in an array of numbers and returns the product of them all.
+// Write a function called productOfArray which takes in an
+// array of numbers and returns the product of them all.
 
 function productOfArray(arr) {
   if (arr.length === 0) {
@@ -22,14 +29,19 @@ function productOfArray(arr) {
   return arr[0] * productOfArray(arr.slice(1));
 }
 
-// Write a function called recursiveRange which accepts a number and adds up all the numbers from 0 to the number passed to the function
+// Write a function called recursiveRange which accepts a number
+// and adds up all the numbers from 0 to the number passed to the function
 
 function recursiveRange(x) {
   if (x === 0) return 0;
   return x + recursiveRange(x - 1);
 }
 
-// Write a recursive function called fib which accepts a number and returns the nth number in the Fibonacci sequence. Recall that the Fibonacci sequence is the sequence of whole numbers 1, 1, 2, 3, 5, 8, ... which starts with 1 and 1, and where every number thereafter is equal to the sum of the previous two numbers.
+// Write a recursive function called fib which accepts a
+// number and returns the nth number in the Fibonacci sequence.
+// Recall that the Fibonacci sequence is the sequence of whole
+// numbers 1, 1, 2, 3, 5, 8, ... which starts with 1 and 1, and
+// where every number thereafter is equal to the sum of the previous two numbers.
 
 function fib(n) {
   if (n <= 2) return 1;
@@ -43,7 +55,9 @@ function reverse(str) {
   return reverse(str.slice(1)) + str[0];
 }
 
-// Write a recursive function called isPalindrome which returns true if the string passed to it is a palindrome (reads the same forward and backward). Otherwise it returns false.
+// Write a recursive function called isPalindrome which returns
+// true if the string passed to it is a palindrome
+// (reads the same forward and backward). Otherwise it returns false.
 
 function isPalindrome(str) {
   if (str.length === 1) return true;
@@ -52,7 +66,9 @@ function isPalindrome(str) {
   return false;
 }
 
-// Write a recursive function called someRecursive which accepts an array and a callback. The function returns true if a single value in the array returns true when passed to the callback. Otherwise it returns false.
+// Write a recursive function called someRecursive which accepts an
+// array and a callback. The function returns true if a single value
+// in the array returns true when passed to the callback. Otherwise it returns false.
 
 function someRecursive(array, callback) {
   if (array.length === 0) return false;
@@ -60,7 +76,8 @@ function someRecursive(array, callback) {
   return someRecursive(array.slice(1), callback);
 }
 
-// Write a recursive function called flatten which accepts an array of arrays and returns a new array with all values flattened.
+// Write a recursive function called flatten which accepts an
+// array of arrays and returns a new array with all values flattened.
 
 function flatten(oldArr) {
   var newArr = [];
@@ -74,7 +91,8 @@ function flatten(oldArr) {
   return newArr;
 }
 
-// Write a recursive function called capitalizeWords. Given an array of words return a new array containing each word capitalized.
+// Write a recursive function called capitalizeWords. Given an array of
+// words return a new array containing each word capitalized.
 
 function capitalizeWords(array) {
   if (array.length === 1) {
@@ -85,7 +103,8 @@ function capitalizeWords(array) {
   return res;
 }
 
-// Write a recursive function called nestedEvenSum. Return the sum of all even numbers in an object which may contain nested objects.
+// Write a recursive function called nestedEvenSum. Return the sum of all
+// even numbers in an object which may contain nested objects.
 
 function nestedEvenSum(obj, sum = 0) {
   for (var key in obj) {
@@ -98,7 +117,8 @@ function nestedEvenSum(obj, sum = 0) {
   return sum;
 }
 
-// Write a recursive function called capitalizeFirst. Given an array of strings, capitalize the first letter of each string in the array
+// Write a recursive function called capitalizeFirst. Given an array
+// of strings, capitalize the first letter of each string in the array
 
 function capitalizeFirst(array) {
   if (array.length === 1) {
@@ -112,7 +132,9 @@ function capitalizeFirst(array) {
   return res;
 }
 
-// Write a function called stringifyNumbers which takes in an object and finds all of the values which are numbers and converts them to strings. Recursion would be a great way to solve this!
+// Write a function called stringifyNumbers which takes in an object
+// and finds all of the values which are numbers and converts them to strings.
+// Recursion would be a great way to solve this!
 
 function stringifyNumbers(obj) {
   var newObj = {};
@@ -128,7 +150,8 @@ function stringifyNumbers(obj) {
   return newObj;
 }
 
-// Write a function called collectStrings which accepts an object and returns an array of all the values in the object that have a typeof string
+// Write a function called collectStrings which accepts an object and
+// returns an array of all the values in the object that have a typeof string
 
 function collectStrings(obj) {
   var stringsArr = [];
