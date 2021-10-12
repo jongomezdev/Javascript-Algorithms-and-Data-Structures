@@ -26,4 +26,4 @@ function deviceNamesSystem(devicenames) {
 
 let device = ['switch', 'tv', 'switch', 'tv', 'switch', 'tv'];
 
-console.log(deviceNamesSystem(device));
+console.table(deviceNamesSystem(device));
