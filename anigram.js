@@ -6,6 +6,7 @@
 // ===============================================================
 
 function validAnagram(first, second) {
+  // Edgecase to test whether or not both strings are of equal length.
   if (first.length !== second.length) {
     return false;
   }
@@ -26,3 +27,6 @@ function validAnagram(first, second) {
   }
   return true;
 }
+
+validAnagram('rat', 'car');
+validAnagram('anagram', 'nagaram');
