@@ -1,23 +1,23 @@
 const arr1 = [
-  ['name', 'id', 'age', 'weight', 'Cool'],
-  ['Susan', '3', '20', '120', true],
-  ['John', '1', '21', '150', true],
-  ['Bob', '2', '23', '90', false],
-  ['Ben', '4', '20', '100', true],
+  ["name", "id", "age", "weight", "Cool"],
+  ["Susan", "3", "20", "120", true],
+  ["John", "1", "21", "150", true],
+  ["Bob", "2", "23", "90", false],
+  ["Ben", "4", "20", "100", true],
 ];
 
 const arr2 = [
-  ['name', 'id', 'height'],
-  ['Bob', '2', '50'],
-  ['John', '1', '45'],
-  ['Ben', '4', '43'],
-  ['Susan', '3', '48'],
+  ["name", "id", "height"],
+  ["Bob", "2", "50"],
+  ["John", "1", "45"],
+  ["Ben", "4", "43"],
+  ["Susan", "3", "48"],
 ];
 
 const arr3 = [
-  ['name', 'id', 'parent'],
-  ['Bob', '2', 'yes'],
-  ['John', '1', 'yes'],
+  ["name", "id", "parent"],
+  ["Bob", "2", "yes"],
+  ["John", "1", "yes"],
 ];
 
 function parseArray(arr) {
@@ -47,7 +47,7 @@ const merged = allData.reduce((acc, currentPerson) => {
       ...acc[existingPersonIndex],
       ...currentPerson, // These are the new fields we are adding in
     };
-    // TODO Return merged
+    // TODO: Return merged
     return acc;
   }
   return [...acc, currentPerson];

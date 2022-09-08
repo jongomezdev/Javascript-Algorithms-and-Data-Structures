@@ -44,3 +44,35 @@ function merge(arr1, arr2) {
 }
 
 merge([1, 10, 50], [2, 14, 99, 100]);
+
+const products = [
+  { id: 1, name: "product 1", liked: false },
+  { id: 2, name: "product 2", liked: false },
+  { id: 3, name: "product 3", liked: false },
+  { id: 4, name: "product 4", liked: false },
+  { id: 5, name: "product 5", liked: false },
+];
+const likedProducts = [
+  { id: 1, name: "product 1", liked: true },
+  { id: 2, name: "product 2", liked: true },
+  { id: 3, name: "product 3", liked: true },
+];
+
+const index = new Map();
+
+//index all products
+for (let item of products) {
+  index.set(item.id, item);
+}
+
+//overwrite anything that is liked
+for (let likedItem of likedProducts) {
+  if (index.has(likedItem.id)) {
+    index.set(likedItem.id, likedItem);
+  }
+}
+
+//construct a new array from the values
+const result = Array.from(index.values());
+
+console.log(result, "result");
